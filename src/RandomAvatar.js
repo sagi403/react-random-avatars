@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { getRandomAvatar } from "./getRandomAvatar";
+import createSquareAvatar from "./utils/createSquareAvatar";
+import getRandomAvatar from "./utils/getRandomAvatar";
 
 const RandomAvatar = ({ size, square }) => {
   const canvasRef = useRef(null);
@@ -21,18 +22,5 @@ const RandomAvatar = ({ size, square }) => {
     />
   );
 };
-
-function randomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
-function createSquareAvatar(avatar, ctx, innerSize) {
-  return avatar.forEach((row, i) => {
-    row.forEach((value, j) => {
-      ctx.fillStyle = value;
-      ctx.fillRect(j * innerSize, i * innerSize, innerSize, innerSize);
-    });
-  });
-}
 
 export default RandomAvatar;
