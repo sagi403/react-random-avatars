@@ -1,18 +1,16 @@
 import { useEffect, useRef } from "react";
+import { getRandomAvatar } from "./getRandomAvatar";
 
 const RandomAvatar = ({ size, square }) => {
   const canvasRef = useRef(null);
-  const avatar = Array.from({ length: 16 }, () =>
-    Array.from({ length: 16 }).map(() => randomColor())
-  );
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const innerSize = size / 10;
 
-    createSquareAvatar(avatar, ctx, innerSize);
-  }, [avatar, size]);
+    createSquareAvatar(getRandomAvatar(), ctx, innerSize);
+  }, [size]);
 
   return (
     <canvas
