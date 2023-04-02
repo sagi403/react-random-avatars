@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import createSquareAvatar from "./utils/createSquareAvatar";
-import getRandomAvatar from "./utils/getRandomAvatar";
+import createSquareAvatar from "../utils/createSquareAvatar";
+import getRandomAvatar from "../utils/getRandomAvatar";
 
-const RandomAvatar = ({ size, square }) => {
+const RandomAvatar = ({ size = 40, square = false }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
