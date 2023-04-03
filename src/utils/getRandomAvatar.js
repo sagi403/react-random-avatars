@@ -1,4 +1,4 @@
-function getRandomAvatar() {
+export function getRandomAvatar() {
   const avatarNames = require
     .context(`../insertYourAvatarHere`, false, /\.js?$/)
     .keys();
@@ -10,5 +10,3 @@ function getRandomAvatar() {
     randomAvatarName
   ];
 }
-
-export default getRandomAvatar;

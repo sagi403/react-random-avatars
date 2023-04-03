@@ -1,4 +1,4 @@
-function createSquareAvatar(avatar, ctx, innerSize) {
+export function createSquareAvatar(avatar, ctx, innerSize) {
   return avatar.forEach((row, i) => {
     row.forEach((value, j) => {
       ctx.fillStyle = value;
@@ -6,5 +6,3 @@ function createSquareAvatar(avatar, ctx, innerSize) {
     });
   });
 }
-
-export default createSquareAvatar;

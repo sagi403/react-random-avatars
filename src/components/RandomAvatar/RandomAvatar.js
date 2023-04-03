@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import createSquareAvatar from "../../utils/createSquareAvatar";
-import getRandomAvatar from "../../utils/getRandomAvatar";
+import { createSquareAvatar, getRandomAvatar } from "../../utils";
 
 export const RandomAvatar = ({ size = 40, square = false }) => {
   const canvasRef = useRef(null);
