@@ -1,1 +1,1 @@
-export { default as RandomAvatar } from "./components/RandomAvatar";
+export * from "./components/RandomAvatar";
