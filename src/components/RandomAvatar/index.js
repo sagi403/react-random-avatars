@@ -1,1 +1,1 @@
-export * from "./RandomAvatar";
+export { default as RandomAvatar } from "./RandomAvatar";

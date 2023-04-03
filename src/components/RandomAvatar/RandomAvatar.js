@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { createSquareAvatar, getRandomAvatar } from "../../utils";
 
-export const RandomAvatar = ({ size = 40, square = false }) => {
+const RandomAvatar = ({ size = 40, square = false }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -21,3 +21,5 @@ export const RandomAvatar = ({ size = 40, square = false }) => {
     />
   );
 };
+
+export default RandomAvatar;
