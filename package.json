@@ -4,8 +4,6 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "build-lib": "rollup -c"
   },
   "repository": {
@@ -19,7 +17,6 @@
   },
   "homepage": "https://github.com/sagi403/react-random-avatars#readme",
   "devDependencies": {
-    "@babel/core": "^7.21.4",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
@@ -27,7 +24,6 @@
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "babel-loader": "^8.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.20.2",
@@ -43,5 +39,6 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {}
 }
