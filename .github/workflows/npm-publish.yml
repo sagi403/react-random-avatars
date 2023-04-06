@@ -23,6 +23,7 @@ jobs:
 
       - name: Build
         run: npm run build-lib # Update the build script name here
+        registry-url: https://registry.npmjs.org/
 
       - name: Publish to npm
         run: npm publish --access public
