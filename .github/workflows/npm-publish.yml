@@ -1,0 +1,30 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - master # Replace 'main' with the name of your default branch, if different
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16 # Replace with the Node.js version you want to use
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build-lib # Update the build script name here
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
