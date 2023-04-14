@@ -10,7 +10,7 @@ interface RandomAvatarProps {
 const RandomAvatar = ({
   size = 40,
   square = false,
-  name = "Default",
+  name = "Default Name",
 }: RandomAvatarProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -19,9 +19,8 @@ const RandomAvatar = ({
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const innerSize = size / 10;
 
-    createSquareAvatar(getRandomAvatar(name), ctx, innerSize);
+    createSquareAvatar(getRandomAvatar(name), ctx, size);
   }, [size]);
 
   return (
