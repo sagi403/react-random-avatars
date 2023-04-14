@@ -1,4 +1,4 @@
-export const test1: string[][] = [
+export const randomColors1: string[][] = [
   [
     "#b315be",
     "#b8d36f",
