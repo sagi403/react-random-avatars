@@ -1,8 +1,10 @@
 import * as avatarsContext from "../insertYourAvatarHere";
+import { simpleHash } from "./simpleHash";
 
-export function getRandomAvatar(): string[][] {
+export function getRandomAvatar(name: string): string[][] {
   const avatarNames = Object.keys(avatarsContext);
-  const randomIndex = Math.floor(Math.random() * avatarNames.length);
-  const randomAvatarName = avatarNames[randomIndex];
-  return avatarsContext[randomAvatarName as keyof typeof avatarsContext];
+  const hash = simpleHash(name);
+  const index = hash % avatarNames.length;
+  const avatarName = avatarNames[index];
+  return avatarsContext[avatarName as keyof typeof avatarsContext];
 }

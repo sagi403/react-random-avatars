@@ -12,5 +12,13 @@ export default meta;
 type Story = StoryObj<typeof RandomAvatar>;
 
 export const Primary: Story = {
-  render: () => <RandomAvatar />,
+  render: () => {
+    return (
+      <>
+        <RandomAvatar name="test1" square={true} />
+        <RandomAvatar name="test2" size={100} />
+        <RandomAvatar name="test3" />
+      </>
+    );
+  },
 };

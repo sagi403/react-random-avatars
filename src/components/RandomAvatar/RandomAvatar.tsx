@@ -4,9 +4,14 @@ import { createSquareAvatar, getRandomAvatar } from "../../utils";
 interface RandomAvatarProps {
   size?: number;
   square?: boolean;
+  name?: string;
 }
 
-const RandomAvatar = ({ size = 40, square = false }: RandomAvatarProps) => {
+const RandomAvatar = ({
+  size = 40,
+  square = false,
+  name = "Default",
+}: RandomAvatarProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -16,7 +21,7 @@ const RandomAvatar = ({ size = 40, square = false }: RandomAvatarProps) => {
     if (!ctx) return;
     const innerSize = size / 10;
 
-    createSquareAvatar(getRandomAvatar(), ctx, innerSize);
+    createSquareAvatar(getRandomAvatar(name), ctx, innerSize);
   }, [size]);
 
   return (
