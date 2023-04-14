@@ -16,10 +16,10 @@ Here's a quick example of how to use the `RandomAvatar` component in your React 
 ```javascript
 import { RandomAvatar } from 'react-random-avatars';
 
-function App() {
+function App({ name }) {
   return (
-    <div className="App">
-      <RandomAvatar />
+    <div>
+      <RandomAvatar name={name} size={40} />
     </div>
   );
 }
@@ -31,17 +31,27 @@ export default App;
 
 | Prop     | Type      | Default        | Description                                        |
 |----------|-----------|----------------|----------------------------------------------------|
-| size     | number    | 40             | The size of the avatar in pixels (width & height)  |
-| square   | boolean   | false          | If true, the avatar will have square corners       |
 | name     | string    | "Default Name" | The input string used to differentiate the avatars |
+| size     | number    | 40             | The size of the avatar in pixels (width & height)  |
+| square   | boolean   | false          | If true, the avatar shape will be square           |
 
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute and help the community grows, please follow these steps:
 
+<p align="center">
+  <a href="https://www.createrandomavatar.com/">
+    <img width="700px" align="center" src="https://user-images.githubusercontent.com/95089762/232052679-8bc566e3-e1ad-4e3b-9d56-a730294dd6b1.JPG" title="Create Random Avatars" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.createrandomavatar.com/">createrandomavatar.com</a>
+</p>
+
 How to insert an avatar?
 
-1. Fork the repository
+1. Fork the repository;
 2. Build your custom, amazing avatar using [this tool](https://www.createrandomavatar.com);
 3. Create a file with a custom name, [here](https://github.com/sagi403/react-random-avatars/tree/master/src/insertYourAvatarHere);
 4. Insert the file in the index, [here](https://github.com/sagi403/react-random-avatars/blob/master/src/insertYourAvatarHere/index.ts);
@@ -50,5 +60,3 @@ How to insert an avatar?
 ## License
 
 React Random Avatars is released under the [MIT License](LICENSE).
-
-Happy coding!
