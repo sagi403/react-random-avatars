@@ -2,6 +2,8 @@
 
 React Random Avatars is a simple and easy-to-use React component that generates random avatars based on a provided name for your application. The generated avatar is unique and consistent for each name, which makes it suitable for user profile images or any other use case where a visual representation of a name is needed.
 
+![React random avatars preview](https://user-images.githubusercontent.com/95089762/232098413-600fdf15-531b-4140-9fab-22eb02ca5032.JPG)
+
 ## Installation
 
 You can install the React Random Avatars component using npm:
