@@ -1,6 +1,6 @@
 export * from "./randomColors";
 export * from "./basicSun";
-export * from "./moon";
+export * from "./basicMoon";
 export * from "./boringFace";
 export * from "./colorLines";
 export * from "./zephyrFrostBeard";

@@ -1,4 +1,4 @@
-export const moon: string[][] = [
+export const basicMoon: string[][] = [
   [
     "#ffffff",
     "#ffffff",
