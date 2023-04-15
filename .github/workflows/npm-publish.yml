@@ -33,11 +33,14 @@ jobs:
       - name: Build
         run: npm run build-lib # Update the build script name here
 
-      - name: Push updated package.json
-        run: |
-          git add package.json package-lock.json
-          git diff-index --quiet HEAD || git commit -m "Bump version"
+      run: |
+        git add package.json package-lock.json
+        if ! git diff-index --quiet HEAD; then
+          git commit -m "Bump version"
+          git remote set-url origin https://${{ secrets.REPO_ACCESS_TOKEN }}@github.com/sagi403/react-random-avatars.git
           git push
+        fi
+
 
       - name: Publish to npm
         run: npm publish --access public
