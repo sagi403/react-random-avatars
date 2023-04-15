@@ -7,9 +7,12 @@ BASE_BRANCH="master"
 
 # Check if there are changes in the folder compared to the base branch
 git fetch origin $BASE_BRANCH
-CHANGES=$(git diff --quiet origin/$BASE_BRANCH HEAD -- $FOLDER_TO_CHECK; echo $?)
+CHANGES=$(git diff --name-only origin/$BASE_BRANCH HEAD -- $FOLDER_TO_CHECK; echo $?)
 
-if [ $CHANGES -eq 1 ]; then
+echo "Changes:"
+echo "$CHANGES"
+
+if [ "$CHANGES" != "" ]; then
   echo "Changes detected in $FOLDER_TO_CHECK"
   echo "UPDATED=true" >> $GITHUB_ENV
 else
