@@ -11,8 +11,8 @@ CHANGES=$(git diff --quiet origin/$BASE_BRANCH HEAD -- $FOLDER_TO_CHECK; echo $?
 
 if [ $CHANGES -eq 1 ]; then
   echo "Changes detected in $FOLDER_TO_CHECK"
-  echo "UPDATED=true" >> $GITHUB_ENV
+  exit 1
 else
   echo "No changes detected in $FOLDER_TO_CHECK"
-  echo "UPDATED=false" >> $GITHUB_ENV
+  exit 0
 fi
