@@ -1,4 +1,4 @@
-export const blueCastle: string[][] = [
+export const castle: string[][] = [
   [
     "#7ed321",
     "#7ed321",
