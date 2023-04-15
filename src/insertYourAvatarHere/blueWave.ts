@@ -1,4 +1,4 @@
-export const wave: string[][] = [
+export const blueWave: string[][] = [
   [
     "#50e3c2",
     "#50e3c2",
