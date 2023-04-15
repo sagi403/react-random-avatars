@@ -1,4 +1,4 @@
-export const sun: string[][] = [
+export const basicSun: string[][] = [
   [
     "#f5a623",
     "#f5a623",

@@ -1,5 +1,5 @@
 export * from "./randomColors";
-export * from "./sun";
+export * from "./basicSun";
 export * from "./moon";
 export * from "./boringFace";
 export * from "./colorLines";
