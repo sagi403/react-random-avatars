@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     branches:
-      - master # Replace 'main' with the name of your default branch, if different
+      - master
 
 jobs:
   build_and_publish:
@@ -22,10 +22,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check for changes
+        run: ./check-changes.sh
+
+      - name: Update package version
+        if: env.UPDATED == 'true'
+        run: npm version patch
+
       - name: Build
+        if: env.UPDATED == 'true'
         run: npm run build-lib # Update the build script name here
 
       - name: Publish to npm
+        if: env.UPDATED == 'true'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
