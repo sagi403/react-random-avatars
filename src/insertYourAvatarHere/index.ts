@@ -9,3 +9,4 @@ export * from "./wave";
 export * from "./xMarkTheSpot";
 export * from "./stoneCube";
 export * from "./mustacheFace";
+export * from "./weirdShape";
