@@ -1,4 +1,4 @@
-export const zephyrFrostBeard: string[][] = [
+export const frostBeard: string[][] = [
   [
     "#d2e6ff",
     "#d2e6ff",

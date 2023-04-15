@@ -3,7 +3,7 @@ export * from "./basicSun";
 export * from "./basicMoon";
 export * from "./boringFace";
 export * from "./colorLines";
-export * from "./zephyrFrostBeard";
+export * from "./frostBeard";
 export * from "./shadowDancer";
 export * from "./blueWave";
 export * from "./xMarkTheSpot";
