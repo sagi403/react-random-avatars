@@ -22,15 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Commit changes
-        run: |
-          git config --global user.email "${{ secrets.EMAIL }}"
-          git config --global user.name "Sagi"
-          git remote set-url origin https://${{ secrets.REPO_ACCESS_TOKEN }}@github.com/sagi403/react-random-avatars.git
-
-      - name: Update package version
-        run: npm version patch
-
       - name: Build
         run: npm run build-lib # Update the build script name here
 
