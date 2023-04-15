@@ -22,25 +22,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Configure git
+      - name: Commit changes
         run: |
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "Sagi"
+          git add .
+          git commit -m "Prepare for npm release"
 
       - name: Update package version
         run: npm version patch
 
       - name: Build
         run: npm run build-lib # Update the build script name here
-
-      run: |
-        git add package.json package-lock.json
-        if ! git diff-index --quiet HEAD; then
-          git commit -m "Bump version"
-          git remote set-url origin https://${{ secrets.REPO_ACCESS_TOKEN }}@github.com/sagi403/react-random-avatars.git
-          git push
-        fi
-
 
       - name: Publish to npm
         run: npm publish --access public
