@@ -21,31 +21,36 @@ jobs:
       - name: Check for changes in the insertYourAvatarHere folder
         id: check_changes
         run: ./check-changes.sh
-        
-      - name: Print UPDATED value
-        run: echo "The value of UPDATED is ${{ env.UPDATED }}"
 
       - name: Set up Node.js
-        if: ${{ env.UPDATED }} == 'true'
+        if: ${{ env.UPDATED == 'true' }}
         uses: actions/setup-node@v2
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        if: ${{ env.UPDATED }} == 'true'
+        if: ${{ env.UPDATED == 'true' }}
         run: npm ci
+      
+      - name: Commit changes
+        if: ${{ env.UPDATED == 'true' }}
+        run: |
+          git config --global user.email "github-action@github.com"
+          git config --global user.name "GitHub Action"
+          git add .
+          git commit -m "Prepare for npm release"
 
       - name: Update package version
-        if: ${{ env.UPDATED }} == 'true'
+        if: ${{ env.UPDATED == 'true' }}
         run: npm version patch
 
       - name: Build
-        if: ${{ env.UPDATED }} == 'true'
+        if: ${{ env.UPDATED == 'true' }}
         run: npm run build-lib # Update the build script name here
 
       - name: Publish to npm
-        if: ${{ env.UPDATED }} == 'true'
+        if: ${{ env.UPDATED == 'true' }}
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
