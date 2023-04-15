@@ -5,9 +5,18 @@ set -e
 FOLDER_TO_CHECK="src/insertYourAvatarHere"
 BASE_BRANCH="master"
 
-# Check if there are changes in the folder compared to the base branch
+# Fetch and checkout the base branch
 git fetch origin $BASE_BRANCH
-CHANGES=$(git diff --name-only origin/$BASE_BRANCH HEAD -- $FOLDER_TO_CHECK)
+git checkout origin/$BASE_BRANCH
+
+# Create a temporary branch and switch to it
+git checkout -b temp_branch
+
+# Merge the changes from the HEAD branch
+git merge --no-commit --no-ff HEAD
+
+# Check if there are changes in the folder compared to the base branch
+CHANGES=$(git diff --name-only -- $FOLDER_TO_CHECK)
 
 echo "Changes:"
 echo "$CHANGES"
