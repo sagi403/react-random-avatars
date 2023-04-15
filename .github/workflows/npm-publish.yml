@@ -36,7 +36,7 @@ jobs:
       - name: Push updated package.json
         run: |
           git add package.json package-lock.json
-          git commit -m "Bump version"
+          git diff-index --quiet HEAD || git commit -m "Bump version"
           git push
 
       - name: Publish to npm
