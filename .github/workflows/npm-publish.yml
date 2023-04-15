@@ -21,6 +21,9 @@ jobs:
       - name: Check for changes in the insertYourAvatarHere folder
         id: check_changes
         run: ./check-changes.sh
+        
+      - name: Print UPDATED value
+        run: echo "The value of UPDATED is ${{ env.UPDATED }}"
 
       - name: Set up Node.js
         if: ${{ env.UPDATED == 'true' }}
