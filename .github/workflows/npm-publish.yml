@@ -23,7 +23,7 @@ jobs:
         run: ./check-changes.sh
         
       - name: Print UPDATED value
-        run: echo "The value of UPDATED is ${{ env.UPDATED == 'true }}"
+        run: echo "The value of UPDATED is ${{ env.UPDATED == 'true' }}"
 
       - name: Set up Node.js
         if: ${{ env.UPDATED == 'true' }}
