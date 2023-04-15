@@ -22,6 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Configure git
+        run: |
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global user.name "Sagi"
+
       - name: Update package version
         run: npm version patch
 
@@ -30,8 +35,6 @@ jobs:
 
       - name: Push updated package.json
         run: |
-          git config --global user.email "${{ secrets.EMAIL }}"
-          git config --global user.name "Sagi"
           git add package.json package-lock.json
           git commit -m "Bump version"
           git push
