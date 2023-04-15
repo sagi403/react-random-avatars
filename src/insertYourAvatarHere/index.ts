@@ -8,3 +8,4 @@ export * from "./shadowDancer";
 export * from "./wave";
 export * from "./xMarkTheSpot";
 export * from "./stoneCube";
+export * from "./mustacheFace";
