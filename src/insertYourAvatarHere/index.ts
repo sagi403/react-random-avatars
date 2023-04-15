@@ -10,3 +10,4 @@ export * from "./xMarkTheSpot";
 export * from "./stoneCube";
 export * from "./mustacheFace";
 export * from "./weirdShape";
+export * from "./castle";
