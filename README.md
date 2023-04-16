@@ -61,6 +61,19 @@ How to insert an avatar?
 4. Insert the file in the index, [here](https://github.com/sagi403/react-random-avatars/blob/master/src/insertYourAvatarHere/index.ts);
 5. Open a pull request, don't you know how to do it? [Read this](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request);
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [![All Contributors](https://img.shields.io/github/all-contributors/sagi403/react-random-avatars?color=ee8449&style=flat-square)](#contributors) specification. Contributions of any kind are welcome!
+
 ## License
 
 React Random Avatars is released under the [MIT License](LICENSE).
