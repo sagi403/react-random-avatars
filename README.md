@@ -73,7 +73,7 @@ How to insert an avatar?
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [![All Contributors](https://img.shields.io/github/all-contributors/sagi403/react-random-avatars?color=ee8449&style=flat-square)](#contributors) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
 
 ## License
 
