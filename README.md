@@ -13,12 +13,13 @@ You can install the React Random Avatars component using npm:
 ```bash
 npm install react-random-avatars
 ```
+
 ## Usage
 
 Here's a quick example of how to use the `RandomAvatar` component in your React application:
 
 ```javascript
-import { RandomAvatar } from 'react-random-avatars';
+import { RandomAvatar } from "react-random-avatars";
 
 function App({ name }) {
   return (
@@ -33,11 +34,11 @@ export default App;
 
 ### Props
 
-| Prop     | Type      | Default        | Description                                        |
-|----------|-----------|----------------|----------------------------------------------------|
-| name     | string    | "Default Name" | The input string used to differentiate the avatars |
-| size     | number    | 40             | The size of the avatar in pixels (width & height)  |
-| square   | boolean   | false          | If true, the avatar shape will be square           |
+| Prop   | Type    | Default        | Description                                        |
+| ------ | ------- | -------------- | -------------------------------------------------- |
+| name   | string  | "Default Name" | The input string used to differentiate the avatars |
+| size   | number  | 40             | The size of the avatar in pixels (width & height)  |
+| square | boolean | false          | If true, the avatar shape will be square           |
 
 ## Contributing
 
@@ -72,7 +73,7 @@ How to insert an avatar?
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the [![All Contributors](https://img.shields.io/github/all-contributors/sagi403/react-random-avatars?color=ee8449&style=flat-square)](#contributors) specification. Contributions of any kind are welcome!
 
 ## License
 
