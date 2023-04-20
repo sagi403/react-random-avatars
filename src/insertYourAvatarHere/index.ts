@@ -12,3 +12,4 @@ export * from "./mustacheFace";
 export * from "./weirdShape";
 export * from "./blueCastle";
 export * from "./bodyCheck";
+export * from "./starBright";
