@@ -29,6 +29,7 @@ const RandomAvatar = ({
       width={size}
       height={size}
       style={{ borderRadius: square ? "0" : "50%" }}
+      data-testid="random-avatar"
     />
   );
 };
