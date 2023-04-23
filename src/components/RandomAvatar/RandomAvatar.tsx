@@ -6,6 +6,7 @@ interface RandomAvatarProps {
   square?: boolean;
   name?: string;
   alt?: string;
+  pattern?: string[][];
 }
 
 const RandomAvatar = ({
@@ -13,6 +14,7 @@ const RandomAvatar = ({
   square = false,
   name = "Default Name",
   alt = "Randomly generated avatar",
+  pattern,
 }: RandomAvatarProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -22,8 +24,9 @@ const RandomAvatar = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    createSquareAvatar(getRandomAvatar(name), ctx, size);
-  }, [size]);
+    const avatarPattern = pattern || getRandomAvatar(name);
+    createSquareAvatar(avatarPattern, ctx, size);
+  }, [size, pattern]);
 
   return (
     <canvas
