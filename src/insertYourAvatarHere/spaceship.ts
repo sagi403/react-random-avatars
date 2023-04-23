@@ -14,5 +14,5 @@ export const spaceship: string[][] = [
  ['#f3f0c0', '#f3f0c0', '#ddb265', '#ddb265', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#ddb265', '#ddb265', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#ddb265', '#ddb265', '#f3f0c0', '#f3f0c0'],
  ['#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0'],
  ['#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0'],
- ['#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0'],
+ ['#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0', '#f3f0c0'],
 ];
