@@ -18,8 +18,8 @@ export const Primary: Story = {
       <>
         <RandomAvatar name="test1" square={true} />
         <RandomAvatar name="test2" size={100} />
-        <RandomAvatar name="test3" />
-        <RandomAvatar name="test4" pattern={test} />
+        <RandomAvatar name="test3" mode="colors" />
+        <RandomAvatar name="test4" pattern={test} mode="pattern" />
       </>
     );
   },

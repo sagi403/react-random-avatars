@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from "react";
-import { createSquareAvatar, getRandomAvatar } from "../../utils";
+import {
+  createSquareAvatar,
+  drawColorBlend,
+  generateRandomColors,
+  getRandomAvatar,
+} from "../../utils";
 
 interface RandomAvatarProps {
   size?: number;
   square?: boolean;
   name?: string;
-  alt?: string;
+  mode?: "random" | "pattern" | "colors";
   pattern?: string[][];
 }
 
@@ -14,6 +19,7 @@ const RandomAvatar = ({
   square = false,
   name = "Default Name",
   pattern,
+  mode = "random",
 }: RandomAvatarProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -23,9 +29,21 @@ const RandomAvatar = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const avatarPattern = pattern || getRandomAvatar(name);
-    createSquareAvatar(avatarPattern, ctx, size);
-  }, [size, pattern]);
+    if (mode === "pattern") {
+      if (!pattern) {
+        console.warn(
+          "Pattern mode is selected, but no pattern is provided. Falling back to the 'random' avatar mode."
+        );
+        createSquareAvatar(getRandomAvatar(name), ctx, size);
+      } else {
+        createSquareAvatar(pattern, ctx, size);
+      }
+    } else if (mode === "colors") {
+      drawColorBlend(generateRandomColors(name), ctx, size);
+    } else {
+      createSquareAvatar(getRandomAvatar(name), ctx, size);
+    }
+  }, [size, mode, pattern]);
 
   return (
     <canvas
