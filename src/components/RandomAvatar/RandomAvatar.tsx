@@ -6,11 +6,13 @@ import {
   getRandomAvatar,
 } from "../../utils";
 
+type AvatarMode = "random" | "pattern" | "colors";
+
 interface RandomAvatarProps {
   size?: number;
   square?: boolean;
   name?: string;
-  mode?: "random" | "pattern" | "colors";
+  mode?: AvatarMode;
   pattern?: string[][];
 }
 
@@ -34,15 +36,13 @@ const RandomAvatar = ({
         console.warn(
           "Pattern mode is selected, but no pattern is provided. Falling back to the 'random' avatar mode."
         );
-        createSquareAvatar(getRandomAvatar(name), ctx, size);
       } else {
-        createSquareAvatar(pattern, ctx, size);
+        return createSquareAvatar(pattern, ctx, size);
       }
     } else if (mode === "colors") {
-      drawColorBlend(generateRandomColors(name), ctx, size);
-    } else {
-      createSquareAvatar(getRandomAvatar(name), ctx, size);
+      return drawColorBlend(generateRandomColors(name), ctx, size);
     }
+    createSquareAvatar(getRandomAvatar(name), ctx, size);
   }, [size, mode, pattern]);
 
   return (
