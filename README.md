@@ -34,11 +34,13 @@ export default App;
 
 ### Props
 
-| Prop   | Type    | Default        | Description                                        |
-| ------ | ------- | -------------- | -------------------------------------------------- |
-| name   | string  | "Default Name" | The input string used to differentiate the avatars |
-| size   | number  | 40             | The size of the avatar in pixels (width & height)  |
-| square | boolean | false          | If true, the avatar shape will be square           |
+| Prop    | Type                                      | Default        | Description                                               |
+| ------- | ----------------------------------------- | -------------- | --------------------------------------------------------- |
+| name    | string                                    | "Default Name" | The input string used to differentiate the avatars        |
+| size    | number                                    | 40             | The size of the avatar in pixels (width & height)         |
+| square  | boolean                                   | false          | If true, the avatar shape will be square                  |
+| mode    | "random" &#124; "pattern" &#124; "colors" | "random"       | The mode for generating the avatar                        |
+| pattern | string[][] (Optional)                     | -              | A custom 2D array pattern (Required if mode is "pattern") |
 
 ## Contributing
 
