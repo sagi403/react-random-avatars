@@ -13,7 +13,6 @@ const RandomAvatar = ({
   size = 40,
   square = false,
   name = "Default Name",
-  alt = "Randomly generated avatar",
   pattern,
 }: RandomAvatarProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -35,7 +34,7 @@ const RandomAvatar = ({
       height={size}
       style={{ borderRadius: square ? "0" : "50%" }}
       data-testid="random-avatar"
-      aria-label={alt}
+      aria-label={`${name} avatar`}
     />
   );
 };

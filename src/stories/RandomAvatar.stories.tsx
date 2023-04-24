@@ -16,7 +16,7 @@ export const Primary: Story = {
   render: () => {
     return (
       <>
-        <RandomAvatar name="test1" square={true} alt="test1" />
+        <RandomAvatar name="test1" square={true} />
         <RandomAvatar name="test2" size={100} />
         <RandomAvatar name="test3" />
         <RandomAvatar name="test4" pattern={test} />
