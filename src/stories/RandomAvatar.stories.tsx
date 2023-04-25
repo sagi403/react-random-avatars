@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { RandomAvatar } from "../components/RandomAvatar";
-import { test } from "./test";
+import { randomPattern } from "./randomPattern";
 
 const meta: Meta<typeof RandomAvatar> = {
   title: "RandomAvatar",
@@ -19,7 +19,7 @@ export const Primary: Story = {
         <RandomAvatar name="test1" square={true} />
         <RandomAvatar name="test2" size={100} />
         <RandomAvatar name="test3" mode="colors" />
-        <RandomAvatar name="test4" pattern={test} mode="pattern" />
+        <RandomAvatar name="test4" pattern={randomPattern} mode="pattern" />
       </>
     );
   },

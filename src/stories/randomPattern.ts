@@ -1,4 +1,4 @@
-export const test: string[][] = [
+export const randomPattern: string[][] = [
   [
     "#000000",
     "#000000",
