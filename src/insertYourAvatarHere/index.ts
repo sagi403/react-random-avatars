@@ -14,3 +14,4 @@ export * from "./blueCastle";
 export * from "./bodyCheck";
 export * from "./starBright";
 export * from "./spaceship";
+export * from "./weirdAlien";
