@@ -15,3 +15,4 @@ export * from "./bodyCheck";
 export * from "./starBright";
 export * from "./spaceship";
 export * from "./weirdAlien";
+export * from "./lineDot";
