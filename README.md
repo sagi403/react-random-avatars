@@ -39,8 +39,32 @@ export default App;
 | name    | string                                    | "Default Name" | The input string used to differentiate the avatars        |
 | size    | number                                    | 40             | The size of the avatar in pixels (width & height)         |
 | square  | boolean                                   | false          | If true, the avatar shape will be square                  |
-| mode    | "random" &#124; "pattern" &#124; "colors" | "random"       | The mode for generating the avatar                        |
-| pattern | string[][] (Optional)                     | -              | A custom 2D array pattern (Required if mode is "pattern") |
+| mode    | string                                    | "random"       | The avatar mode: "random", "pattern", or "colors"         |
+| pattern | array                                     | -              | A 2D array of colors representing the custom avatar pattern (Required if mode is "pattern") |
+
+### Avatar Modes
+
+#### Random Avatar Mode (default)
+
+This mode generates a random avatar based on the provided name. Each avatar is unique and consistent for each name.
+
+<p align="center">
+    <img width="800px" align="center" src="https://user-images.githubusercontent.com/95089762/234231119-0806b4ea-a4df-40c7-b9d6-afcef2e7db64.JPG" title="Random Avatar Example" />
+
+#### Pattern Avatar Mode
+    
+This mode allows you to provide your own custom pattern to create an avatar. The pattern is a 2D array of colors representing the avatar's design. 
+When selecting this mode, you must also provide a value for the `pattern` prop.
+
+<p align="center">
+    <img width="800px" align="center" src="https://user-images.githubusercontent.com/95089762/234231999-925d5958-c111-488d-b62f-58c8e5785e3e.JPG" title="Pattern Avatar Example" />
+    
+#### Colors Avatar Mode
+    
+This mode generates an avatar using a color blend based on the provided name. It creates a radial gradient with different colors to represent the name.
+
+<p align="center">
+    <img width="800px" align="center" src="https://user-images.githubusercontent.com/95089762/234233340-2a100f9d-a197-4ef2-ac6e-6c5ffb12c7a3.JPG" title="Colors Avatar Example" />
 
 ## Contributing
 
